@@ -77,6 +77,44 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
+/* Media Queries */
+
+/*Medium devices (tablets, 768px and up)*/
+@media screen and (min-width: 768px) {
+
+    /* Ensure all cards in services section have the same height */
+    #services .card-body {
+        min-height: 191px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+    /* Ensure all cards in services section have the same height */
+    #services .card-body {
+        min-height: auto;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+
+    /* Ensure all cards in services section have the same height */
+    #services .card-body {
+        min-height: 220px;
+    }
+}
+
+/* Extra extra large devices (larger desktops, 1400px and up) */
+@media screen and (min-width: 1400px) {
+
+    /* Ensure all cards in services section have the same height */
+    #services .card-body {
+        min-height: 195px;
+    }
+}
+
 /* grid visualization */
 /*
 .container,
