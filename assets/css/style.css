@@ -52,6 +52,30 @@ h2 {
     margin-bottom: 2rem;
 }
 
+/*Button Styles */
+.custom-btn-filled,
+.custom-btn-outline:hover {
+    border: 2px solid var(--highlight-color);
+    background-color: var(--highlight-color);
+    color: white;
+}
+
+.custom-btn-filled:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+.custom-btn-outline {
+    border: 2px solid var(--highlight-color);
+    background-color: transparent;
+    color: var(--highlight-color);
+    padding: 7px 25px;
+}
+
+
+
+
 /* Navbar Styles */
 #navbar {
     background-color: var(--primary-color);
@@ -156,15 +180,3 @@ h2 {
         min-height: 195px;
     }
 }
-
-/* grid visualization */
-/*
-.container,
-.row {
-    border: 1px solid black;
-}
-
-.col-12 {
-    border: 1px solid white;
-    background-color: lightgray;
-}*/
