@@ -27,7 +27,7 @@
 <body class="d-flex flex-column min-vh-100"><!-- These apply display-flex arrange the flex items in a
 column and set a minimum height to stretch the page body to the full height of the viewport. -->
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="assets/images/logo-sm-white.png" alt="Boardwalk Games Logo" class="logo">
@@ -194,20 +194,21 @@ column and set a minimum height to stretch the page body to the full height of t
                 </div>
             </div>
         </section>
-        <section id="events" class="container section mt-5">
+        <section id="events" class="container section">
             <div class="row">
-                <h2 class="display-6 text-center">Join our events</h2>
-                <div class="col-12 col-lg-6 text-start mt-4">
+                <div class="col-12">
+                    <h2 class="display-6 text-center">Join our events</h2>
+                </div>
+                <div class="col-12 col-xl-6">
                     <p>Whether you're delving into dungeons, reliving classic games, or
                         competing in high-stakes tournaments, there's something
                         for every gamer. Reservations are recommended to ensure your spot at the table. Student
                         discounts are available, so
                         bring your student ID and enjoy more gaming for less.</p>
                     <p>Outside scheduled events, our shop remains open for regular play. Join us anytime to discover new
-                        games and meet fellow
-                        enthusiasts.</p>
+                        games and meet fellow enthusiasts.</p>
                 </div>
-                <div class="col-12 col-lg-6 justify-content-center align-items-center d-flex flex-column">
+                <div class="col-12 col-xl-6">
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -240,8 +241,7 @@ column and set a minimum height to stretch the page body to the full height of t
                         <tfoot>
                         </tfoot>
                     </table>
-                    <p class=" col-12 col-md-4 col-lg-6 highlight"><strong>*Get 20% off with valid student ID</strong>
-                    </p>
+                    <p class="student-discount text-center">*Get 20% off with valid student ID</p>
                 </div>
                 <div class="col-12 text-center mt-4">
                     <a class="btn custom-btn-outline mb-4 ms-2" aria-current="page" href="booking.html">Book
@@ -292,11 +292,11 @@ column and set a minimum height to stretch the page body to the full height of t
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">Monday</th>
+                                <th scope="row">Mon</th>
                                 <td colspan="2">Closed</td>
                             </tr>
                             <tr>
-                                <th scope="row">Tue - Tur</th>
+                                <th scope="row">Tue - Thur</th>
                                 <td>11am</td>
                                 <td>11pm</td>
                             </tr>
@@ -306,7 +306,7 @@ column and set a minimum height to stretch the page body to the full height of t
                                 <td>12am</td>
                             </tr>
                             <tr>
-                                <th scope="row">Sunday</th>
+                                <th scope="row">Sun</th>
                                 <td>12pm</td>
                                 <td>7pm</td>
                             </tr>

@@ -25,7 +25,7 @@
 <body class="d-flex flex-column min-vh-100"><!-- These apply display-flex arrange the flex items in a
     column and set a minimum height to stretch the page body to the full height of the viewport. -->
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="assets/images/logo-sm-white.png" alt="Boardwalk Games Logo" class="logo">
@@ -105,9 +105,9 @@
 
     <!-- Main content -->
     <main>
-        <!-- Game library section -->
+        <!-- New Game section -->
         <section id="new-games" class="container section">
-            <div class="row no-border">
+            <div class="row">
                 <div class="col-12 text-center">
                     <h2 class="display-6">New Games</h2>
                 </div>
@@ -251,52 +251,53 @@
                 </div>
             </div>
         </section>
-        <section id="reserve-form" class="container section">
+        <section id="reserve-game-form" class="container section mb-5">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8">
                     <h2 class="display-6 text-center">Reserve a game</h2>
-                    <p class="my-4 text-start">Reserve a board game for your next visit to Boardwalk Games. Pick your
+                    <p>Reserve a board game for your next visit to Boardwalk Games. Pick your
                         challenge,
                         and let the adventure begin! Fill out
                         your details and preferred game below, and we'll have it set aside for you when you arrive.</p>
-                </div>
-                <form action="success.html" method="GET" class="row g-3">
-                    <div class="col-12 col-lg-4">
-                        <label for="name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <label for="phone" class="form-label">Phone Number</label>
-                        <input type="number" class="form-control" id="phone" name="phone" required>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="col-12 col-lg-8">
-                        <label for="select-game" class="form-label">Select game</label>
-                        <select id="select-game" class="form-select" name="select-game" required>
-                            <option value="" selected>Select game</option>
-                            <option value="galaxy-pioneers">Galaxy Pioneers</option>
-                            <option value="mystic-woods">Mystic Woods</option>
-                            <option value="captains-gambit">Captain's Gambit</option>
-                            <option value="critter-quest">Critter Quest</option>
-                            <option value="settlers-of-catan">Settlers of Catan</option>
-                            <option value="monopoly">Monopoly</option>
-                            <option value="exploding-kittens">Exploding Kittens</option>
-                            <option value="cluedo">Cluedo</option>
-                        </select>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <label for="requestedDate" class="form-label">Requested date</label>
-                        <input id="requestedDate" class="form-control" type="date" required>
-                        <span id="requestedDateSelected"></span>
-                    </div>
-                    <div class="col-12 text-end mt-4">
-                        <button type="submit" class="btn custom-btn-outline">Submit</button>
-                    </div>
-                </form>
 
+                    <form action="success.html" method="GET">
+                        <div class="row">
+                            <div class="col-12 col-lg-4 mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-12 col-lg-4 mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="number" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            <div class="col-12 col-lg-4 mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="col-12 col-lg-8 mb-3">
+                                <label for="select-game" class="form-label">Select game</label>
+                                <select id="select-game" class="form-select" name="select-game" required>
+                                    <option value="" selected>Select game</option>
+                                    <option value="galaxy-pioneers">Galaxy Pioneers</option>
+                                    <option value="mystic-woods">Mystic Woods</option>
+                                    <option value="captains-gambit">Captain's Gambit</option>
+                                    <option value="critter-quest">Critter Quest</option>
+                                    <option value="settlers-of-catan">Settlers of Catan</option>
+                                    <option value="monopoly">Monopoly</option>
+                                    <option value="exploding-kittens">Exploding Kittens</option>
+                                    <option value="cluedo">Cluedo</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-lg-4 mb-3">
+                                <label for="date" class="form-label">Requested date</label>
+                                <input id="date" class="form-control" type="date" name="date" required>
+                            </div>
+                            <div class="col-12 text-end">
+                                <button type="submit" class="btn custom-btn-outline mt-3">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
@@ -342,11 +343,11 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">Monday</th>
+                                <th scope="row">Mon</th>
                                 <td colspan="2">Closed</td>
                             </tr>
                             <tr>
-                                <th scope="row">Tue - Tur</th>
+                                <th scope="row">Tue - Thur</th>
                                 <td>11am</td>
                                 <td>11pm</td>
                             </tr>
@@ -356,7 +357,7 @@
                                 <td>12am</td>
                             </tr>
                             <tr>
-                                <th scope="row">Sunday</th>
+                                <th scope="row">Sun</th>
                                 <td>12pm</td>
                                 <td>7pm</td>
                             </tr>

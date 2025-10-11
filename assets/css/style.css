@@ -17,14 +17,11 @@
 }
 
 /* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     font-family: var(--primary-font);
+    padding-top: 57.15px;
+    /* pushes the top of the header down under fixed navbar */
 }
 
 h1,
@@ -49,17 +46,8 @@ h2 {
 }
 
 .section {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.highlight {
-    min-width: fit-content;
-    background-color: var(--highlight-color);
-    color: white;
-    padding: 0.5rem 2rem;
-    text-align: center;
-    font-size: 0.75rem;
+    padding-top: 4rem;
+    /* prevent navbar overlap */
 }
 
 /*Button Styles */
@@ -72,14 +60,12 @@ h2 {
 
 .custom-btn-filled:hover {
     background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
     color: white;
 }
 
 .custom-btn-outline {
-    max-width: fit-content;
-    border: 2px solid var(--highlight-color);
-    background-color: transparent;
+    border: 3px solid var(--highlight-color);
     color: var(--highlight-color);
     padding: 7px 25px;
 }
@@ -107,6 +93,26 @@ h2 {
 
 #services .card {
     margin-bottom: 1.5rem;
+}
+
+/* Events Section Styles */
+#events .table {
+    /* events table font size small enough that 
+    the table doesn't overflow on xs screens. 
+    Size set back to 1rem in a media query 
+      for sm screens and up */
+    font-size: 0.7rem;
+}
+
+.student-discount {
+    background-color: var(--highlight-color);
+    font-weight: bold;
+    color: white;
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    padding: 5px 10px;
+    font-size: 0.8rem;
 }
 
 /*Game Library Cards  */
@@ -152,12 +158,17 @@ h2 {
 }
 
 /* Media Queries */
-/* Small devices (landscape phones, 576px and up) */
-@media screen and (max-width: 576px) {
 
-    #events th,
-    #events td {
-        font-size: 12px;
+/* Small screens and up */
+@media screen and (min-width: 576px) {
+
+    /* increase font size in events table when screen size is large enough */
+    #events .table {
+        font-size: 1rem;
+    }
+
+    .student-discount {
+        font-size: 1rem;
     }
 }
 
@@ -169,10 +180,6 @@ h2 {
     #services .card-body {
         min-height: 191px;
     }
-
-    #reserve-form form {
-        width: 65%;
-    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -181,11 +188,6 @@ h2 {
     /* Ensure all cards in services section have the same height */
     #services .card-body {
         min-height: auto;
-    }
-
-    .highlight {
-        font-size: 0.85rem;
-        min-width: fit-content;
     }
 }
 
