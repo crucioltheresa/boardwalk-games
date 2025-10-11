@@ -54,6 +54,7 @@ h2 {
 }
 
 .highlight {
+    min-width: fit-content;
     background-color: var(--highlight-color);
     color: white;
     padding: 0.5rem 2rem;
@@ -152,11 +153,11 @@ h2 {
 
 /* Media Queries */
 /* Small devices (landscape phones, 576px and up) */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
 
     #events th,
     #events td {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 
@@ -168,6 +169,10 @@ h2 {
     #services .card-body {
         min-height: 191px;
     }
+
+    #reserve-form form {
+        width: 65%;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -176,6 +181,11 @@ h2 {
     /* Ensure all cards in services section have the same height */
     #services .card-body {
         min-height: auto;
+    }
+
+    .highlight {
+        font-size: 0.85rem;
+        min-width: fit-content;
     }
 }
 
