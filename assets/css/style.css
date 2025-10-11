@@ -43,6 +43,7 @@ h2 {
     margin-bottom: 2rem;
 }
 
+
 .sub-heading-color {
     color: var(--highlight-color);
 }
@@ -50,6 +51,14 @@ h2 {
 .section {
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+.highlight {
+    background-color: var(--highlight-color);
+    color: white;
+    padding: 0.5rem 2rem;
+    text-align: center;
+    font-size: 0.75rem;
 }
 
 /*Button Styles */
@@ -67,14 +76,12 @@ h2 {
 }
 
 .custom-btn-outline {
+    max-width: fit-content;
     border: 2px solid var(--highlight-color);
     background-color: transparent;
     color: var(--highlight-color);
     padding: 7px 25px;
 }
-
-
-
 
 /* Navbar Styles */
 #navbar {
@@ -144,6 +151,15 @@ h2 {
 }
 
 /* Media Queries */
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (max-width: 500px) {
+
+    #events th,
+    #events td {
+        font-size: 10px;
+    }
+}
+
 
 /*Medium devices (tablets, 768px and up)*/
 @media screen and (min-width: 768px) {
